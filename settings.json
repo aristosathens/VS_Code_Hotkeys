@@ -1,0 +1,20 @@
+{
+    "window.zoomLevel": 0,
+    "editor.rulers": [100],
+// }
+
+// "editor.renderWhitespace": "all",
+
+
+"python.linting.pylintCategorySeverity.error": "Error",
+   "python.linting.pylintArgs": ["-j", "4", "-f", "parseable", "--extension-pkg-whitelist=cv2",
+           "--disable=duplicate-code,no-else-return,not-context-manager,no-member,no-else-raise",
+                                 "--ignored-modules=vconfig"],
+   "files.watcherExclude": {
+       "**/.git/objects/**": true,
+       "**/.git/subtree-cache/**": true,
+       "**/node_modules/*/**": true,
+       "**/camera-firmware/**": true
+    },
+    "files.autoSave": "off",
+}
