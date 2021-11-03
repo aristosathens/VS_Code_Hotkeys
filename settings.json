@@ -1,20 +1,32 @@
 {
-    "window.zoomLevel": 0,
-    "editor.rulers": [100],
-// }
-
-// "editor.renderWhitespace": "all",
-
-
-"python.linting.pylintCategorySeverity.error": "Error",
-   "python.linting.pylintArgs": ["-j", "4", "-f", "parseable", "--extension-pkg-whitelist=cv2",
-           "--disable=duplicate-code,no-else-return,not-context-manager,no-member,no-else-raise",
-                                 "--ignored-modules=vconfig"],
-   "files.watcherExclude": {
-       "**/.git/objects/**": true,
-       "**/.git/subtree-cache/**": true,
-       "**/node_modules/*/**": true,
-       "**/camera-firmware/**": true
+    "files.eol": "\n",
+    "files.insertFinalNewline": true,
+    // "editor.rulers": [
+    //     100
+    // ],
+    // Golang
+    "go.lintOnSave": "file",
+    "go.lintFlags": [],
+    "go.formatTool": "goimports",
+    "[go]": {
+        "editor.formatOnSave": true
     },
-    "files.autoSave": "off",
+    // Typescript
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "prettier.printWidth": 100,
+    "prettier.tabWidth": 4,
+    "workbench.editorAssociations": {
+        "*.ipynb": "jupyter-notebook"
+    },
+    "notebook.cellToolbarLocation": {
+        "default": "right",
+        "jupyter-notebook": "left"
+    },
+    "go.lintTool": "golint",
+    "python.formatting.provider": "black",
+    "editor.renderWhitespace": "all",
+    "window.zoomLevel": 1,
+    "gitlens.blame.format": "${author|14} ${message|50?} ${agoOrDate|14-}",
 }

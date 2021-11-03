@@ -1,3 +1,4 @@
+// Place your key bindings in this file to override the defaults
 // Place your key bindings in this file to override the defaultsauto[]
 [
     {
@@ -5,75 +6,128 @@
         "command": "editor.action.showHover",
         "when": "editorTextFocus"
     },
-
-
     {
-        "key": "ctrl+l",
+        "key": "cmd+l",
         "command": "workbench.action.terminal.toggleTerminal"
     },
     {
-        "key": "ctrl+l",
+        "key": "cmd+l",
         "command": "workbench.action.focusActiveEditorGroup",
         "when": "terminalFocus"
     },
     {
-        "key": "ctrl+l",
+        "key": "cmd+l",
         "command": "workbench.action.terminal.focus",
         "when": "!terminalFocus"
     },
     {
-        "key": "ctrl+escape",
-        "command": "workbench.action.quit"
-    },
-    {
-        "key": "ctrl+q",
+        "key": "cmd+q",
         "command": "workbench.action.terminal.kill",
         "when": "terminalFocus"
     },
     {
-        "key": "ctrl+q",
+        "key": "cmd+q",
         "command": "workbench.action.closePanel",
         "when": "!terminalFocus"
     },
     {
-        "key": "shift+tab",
+        "key": "tab",
         "command": "editor.action.indentLines",
         "when": "editorTextFocus && !editorReadonly"
     },
     {
-        "key": "ctrl+shift+tab",
+        "key": "shift+tab",
         "command": "editor.action.outdentLines",
         "when": "editorTextFocus && !editorReadonly"
     },
     {
-        "key": "ctrl+shift+b",
-        "command": "-workbench.action.tasks.build"
+        "key": "cmd+shift+f",
+        "command": "workbench.action.toggleSidebarVisibility",
+        "when": "sideBarFocus"
     },
-    {
-        "key": "ctrl+b",
-        "command": "python.execInTerminal"
-    },
+    // {
+    //     "key": "cmd+g",
+    //     "command": "go.fill.struct",
+    // },
+    // {
+    //     "key": "cmd+shift+b",
+    //     "command": "-workbench.action.tasks.build"
+    // },
+    // {
+    //     "key": "cmd+b",
+    //     "command": "python.execInTerminal"
+    // },
     {
         "key": "f2",
         "command": "editor.action.changeAll",
         "when": "editorTextFocus && !editorReadonly"
     },
     {
-        "key": "ctrl+t",
+        "key": "cmd+t",
         "command": "workbench.action.files.newUntitledFile"
     },
     {
-        "key": "ctrl+n",
+        "key": "cmd+n",
         "command": "workbench.action.newWindow"
     },
+    // {
+    //     "key": "cmd+e",
+    //     "command": "-workbench.action.quickOpen"
+    // },
+    // {
+    //     "key": "cmd+e",
+    //     "command": "-workbench.action.quickOpenNavigateNextInFilePicker",
+    //     "when": "inFilesPicker && inQuickOpen"
+    // },
     {
-        "key": "ctrl+e",
-        "command": "-workbench.action.quickOpen"
+        "key": "shift+cmd+e",
+        "command": "-workbench.view.explorer",
+        "when": "viewContainer.workbench.view.explorer.enabled"
     },
     {
-        "key": "ctrl+e",
-        "command": "-workbench.action.quickOpenNavigateNextInFilePicker",
-        "when": "inFilesPicker && inQuickOpen"
+        "key": "cmd+e",
+        "command": "workbench.action.increaseViewWidth"
     },
-
+    // {
+    //     "key": "cmd+e",
+    //     "command": "-actions.findWithSelection"
+    // },
+    {
+        "key": "shift+cmd+e",
+        "command": "workbench.action.decreaseViewWidth"
+    },
+    {
+        "key": "cmd+e",
+        "command": "workbench.action.decreaseViewHeight",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "shift+cmd+e",
+        "command": "workbench.action.increaseViewHeight",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "cmd+b",
+        "command": "gitlens.toggleFileBlame",
+        "when": "editorTextFocus && config.gitlens.keymap == 'alternate' && gitlens:activeFileStatus =~ /blameable/"
+    },
+    {
+        "key": "alt+b",
+        "command": "-gitlens.toggleFileBlame",
+        "when": "editorTextFocus && config.gitlens.keymap == 'alternate' && gitlens:activeFileStatus =~ /blameable/"
+    },
+    {
+        "key": "cmd+b",
+        "command": "gitlens.toggleFileBlame",
+        "when": "editorTextFocus && config.gitlens.keymap == 'chorded' && gitlens:activeFileStatus =~ /blameable/"
+    },
+    {
+        "key": "alt+cmd+g b",
+        "command": "-gitlens.toggleFileBlame",
+        "when": "editorTextFocus && config.gitlens.keymap == 'chorded' && gitlens:activeFileStatus =~ /blameable/"
+    },
+    {
+        "key": "cmd+b",
+        "command": "-workbench.action.toggleSidebarVisibility"
+    }
 ]
